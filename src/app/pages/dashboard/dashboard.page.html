@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar class="toolbar">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Complaint Form</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <!-- <div *ngIf="user != undefined">
+      Welcome {{ user["first_name"]  }} {{ user["last_name"]  }}
+  </div> -->
+          <!-- <ion-card-header>
+            <ion-card-title color="secondary">Complaint Form</ion-card-title>
+        </ion-card-header>
+        <ion-card-content> -->
+          <ion-text >
+            <h2 style="color:teal;" >Complaint Form</h2>
+            </ion-text>
+            <ion-item>
+                <ion-label>Location Code :</ion-label>
+                <ion-input type="text" ></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Location :</ion-label>
+                <ion-input type="text" ></ion-input>
+            </ion-item>
+                <ion-item>
+                    <ion-label>Position :</ion-label>
+                    <ion-select placeholder="Select One">
+                        <ion-select-option value="staff">staff</ion-select-option>
+                        <ion-select-option value="none staff">none staff</ion-select-option>
+                    </ion-select>
+                    </ion-item>
+                <!-- <ion-textarea placeholder="Staff or none Staff"></ion-textarea> -->
+                <ion-item>
+                    <ion-label>Classification :</ion-label>
+                    <ion-select interface="popover">
+                        <ion-select-option value="nes">NES</ion-select-option>
+                        <ion-select-option value="n64">Nintendo64</ion-select-option>
+                        <ion-select-option value="ps">PlayStation</ion-select-option>
+                        <ion-select-option value="genesis">Sega Genesis</ion-select-option>
+                        <ion-select-option value="saturn">Sega Saturn</ion-select-option>
+                        <ion-select-option value="snes">SNES</ion-select-option>
+                    </ion-select>
+                    </ion-item>
+             <!-- <ion-item>
+                 <ion-label>Classification :</ion-label>
+                <ion-textarea ></ion-textarea>
+            </ion-item> -->
+            
+            <ion-item>
+                <ion-label position="floating">Complaint</ion-label>
+                <ion-textarea rows="6" cols="20"></ion-textarea>
+            </ion-item>
+        <!-- </ion-card-content> -->
+        
+   
+
+        <ion-button type="submit"  class="but" expand="block">Submit</ion-button>
+</ion-content>

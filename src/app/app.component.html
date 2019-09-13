@@ -1,3 +1,30 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-split-pane style="--background:#004080;" >
+    <ion-menu style="--background:purple;">
+      <ion-header >
+        <ion-toolbar style="--background:purple;"  >
+          <ion-title style="--color:white;">eCMS</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list >
+          <ion-menu-toggle   auto-hide="false" *ngFor="let p of appPages">
+            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+              <ion-icon slot="start" [name]="p.icon"></ion-icon>
+              <ion-label style="--color:blue;">
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-item (click)="logout()">
+            <ion-icon slot="start" name="log-out"></ion-icon>
+            <ion-label style="color:purple;" >
+              Logout
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet main ></ion-router-outlet>
+  </ion-split-pane>
 </ion-app>
